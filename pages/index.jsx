@@ -26,7 +26,13 @@ function HomePage() {
 export default HomePage
 
 const StyledHeader = styled.div`
-  img {
+  .banner {
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .profile {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -37,16 +43,22 @@ const StyledHeader = styled.div`
     width: 100%;
     padding: 16px 32px;
     gap: 16px;
-    margin-top: 50px;
+    margin-top: 10px;
   }
 `
 function Header() {
   return (
     <StyledHeader>
-      {/* <img src="banner" /> */}
+      <img
+        className="banner"
+        src="https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+      />
 
       <section className="user-info">
-        <img src={`https://github.com/${config.github}.png`} />
+        <img
+          className="profile"
+          src={`https://github.com/${config.github}.png`}
+        />
         <div>
           <h2>{config.name}</h2>
           <p>{config.job}</p>
